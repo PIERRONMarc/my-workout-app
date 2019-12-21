@@ -6,7 +6,7 @@ services:
       - "80:80"
     volumes:
       - ./api/:/var/www/html
-      - ./apache2/apache2.conf:/etc/apache2/apache2.conf
+      # - ./apache2/apache2.conf:/etc/apache2/apache2.conf
     links:
       - db:db
   db:
