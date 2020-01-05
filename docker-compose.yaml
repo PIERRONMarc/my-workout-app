@@ -11,10 +11,11 @@ services:
       - db:db
   db:
     image: mysql
+    command: ["--default-authentication-plugin=mysql_native_password"]
     volumes:
             - "./.data/db:/var/lib/mysql"
     environment:
-            MYSQL_ROOT_PASSWORD: ROOT
+      MYSQL_ROOT_PASSWORD: root
   phpmyadmin:
       image: phpmyadmin/phpmyadmin
       depends_on:

@@ -1,13 +1,13 @@
 import React from '../../../node_modules/react';
 import Home from '../pages/Home/Home.js'
 import Session from '../pages/Session/Session.js'
-import logo from '../../assets/logo.svg';
+// import logo from '../../assets/logo.svg';
 import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  // Link
 } from "react-router-dom";
 
 function App() {
