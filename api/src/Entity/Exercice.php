@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ExerciceRepository")
@@ -22,6 +23,7 @@ class Exercice
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"get_session", "get_exercice_session"})
      */
     private $name;
 

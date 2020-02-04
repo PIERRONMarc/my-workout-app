@@ -11,7 +11,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\SessionRepository")
  * @ApiResource(
- *      normalizationContext={"groups"={"read"}},
+ *      normalizationContext={"groups"={"read", "get_session"}},
  *      denormalizationContext={"groups"={"write"}}
  * )
  */
@@ -21,19 +21,19 @@ class Session
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Groups("read")
+     * @Groups({"read", "get_session"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="date")
-     * @Groups({"write", "read"})
+     * @Groups({"write", "read", "get_session"})
      */
     private $day;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\ExerciceSession", mappedBy="session", orphanRemoval=true)
-     * @Groups("read")
+     * @Groups({"read", "get_session"})
      */
     private $exerciceSessions;
 
