@@ -1,11 +1,11 @@
 import { format } from 'date-fns';
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import './session.css';
+import './session_new.css';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
 
-export default class Session extends React.Component {
+export default class SessionNew extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
