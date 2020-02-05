@@ -16,6 +16,7 @@ class Sets
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"get_session", "get_exercice_session", "post_exercice_session"})
      */
     private $id;
 

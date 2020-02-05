@@ -3,8 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Session;
+use DateTime;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+use Symfony\Component\Validator\Constraints\Date;
 
 /**
  * @method Session|null find($id, $lockMode = null, $lockVersion = null)
@@ -47,4 +49,16 @@ class SessionRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function findLast() {
+        $today = new DateTime();
+        return $this->createQueryBuilder('s')
+            ->andWhere('s.day < :today')
+            ->setParameter('today', $today)
+            ->orderBy('s.day', 'DESC')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getOneOrNullResult()
+        ;
+    }
 }
