@@ -1,5 +1,5 @@
 import React from 'react';
-import './session_index.css';
+import './session_index.scss';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
@@ -33,7 +33,7 @@ export default class SessionIndex extends React.Component {
         const sessions = this.state.sessions;
 
         return(
-            <div className="content">
+            <div className="main-content">
                 <h1>AllSession</h1>
                 {sessions.map((session) => 
                     <div key={session.id}>

@@ -4,8 +4,9 @@ import SessionIndex from '../pages/Session/index/session_index.js'
 import SessionNew from '../pages/Session/new/session_new.js'
 import SessionShow from '../pages/Session/show/session_show.js'
 import SessionLast from '../pages/Session/last/session_last.js'
+import Header from '../../component/Header/Header.js'
 // import logo from '../../assets/logo.svg';
-import './App.css';
+import './App.scss';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,6 +18,7 @@ export default function App() {
   return (
     <Router>
       <div className="App">
+        <Header />
         <Switch>
           <Route path="/" component={Home} exact/>
           <Route path="/sessions/new" component={SessionNew} exact/>

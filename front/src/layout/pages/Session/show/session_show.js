@@ -127,7 +127,7 @@ class SessionShow extends React.Component {
         const { session, exercicesList, isLoading } = this.state;
 
         return(
-            <div className="content">
+            <div className="main-content">
                 <h1>Session Show</h1>
                 <ul>
                     <li>{session.id}</li>

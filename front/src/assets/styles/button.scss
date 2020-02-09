@@ -1,0 +1,19 @@
+@import './color.scss';
+
+.btn {
+    
+    background-color: $primary-color !important;
+    color: $secondary-color !important;
+    
+    &:hover {
+        background-color: $p-dark!important;
+    }
+    &__wrapper {
+        position: relative;
+    }
+
+    &__loading {
+        position: absolute;
+        color:$p-light !important;
+    }
+}

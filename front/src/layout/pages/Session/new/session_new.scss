@@ -1,0 +1,28 @@
+@import '../../../../assets/styles/color.scss';
+@import '../../../../assets/styles/button.scss';
+
+
+.session-new {
+    display:flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__title {
+        font-size: 4.8em;
+        margin: 0 0 2rem -25rem;
+    }
+
+    &__form {
+        display:flex;
+        align-items: center;
+    }
+}
+
+.btn {
+
+    &__wrapper {
+        margin-left: 3rem;
+    }
+}
