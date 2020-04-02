@@ -1,6 +1,6 @@
 # myWorkoutApp
 
-Record work out sessions and see your progression #workInProgress
+Record your work out sessions and see your progression #workInProgress
 
 ## Run with Docker
 
